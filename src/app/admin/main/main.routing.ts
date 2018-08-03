@@ -4,7 +4,16 @@ import { MainComponent } from './main.component';
 import { NotFoundComponent } from '../../shared';
 
 const routes: Routes = [
-    { path: '', component: MainComponent }
+    {
+        path: '',
+        component: MainComponent,
+        children: [
+            { path: 'vehicleowner', loadChildren: './vehicle-owner/vehicle-owner.module#VehicleOwnerModule' },
+            { path: 'vehicle', loadChildren: './vehicle/vehicle.module#VehicleModule' },
+            { path: 'driver', loadChildren: './driver/driver.module#DriverModule' },
+            { path: 'customer', loadChildren: './customer/customer.module#CustomerModule' }
+        ]
+    }
 ];
 
 @NgModule({

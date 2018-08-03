@@ -10,6 +10,8 @@ import { MainRoutingModule } from './main.routing';
     ThemeModule.forRoot(),
     MainRoutingModule,
   ],
-  declarations: [MainComponent]
+  declarations: [
+    MainComponent
+  ]
 })
 export class MainModule { }
